@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Photo</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+</head>
+<body class="m-5">
+	<div class="container">
+		<div class="row justify-content-center">
+			<div class="col">
+				<a href="{% url 'gallery' %}" class="btn btn-dark my-3">Go Back</a>
+				<div style="height: 90vh;">
+					<img style="display: block; margin-left: auto; margin-right: auto;" src="{{photo.image.url}}">
+
+					<p>{{photo.description}}</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
